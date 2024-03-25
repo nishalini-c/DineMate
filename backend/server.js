@@ -17,7 +17,7 @@ const mongoString = process.env.DATABASE_URL;
 mongoose.connect(mongoString)
 const database = mongoose.connection
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'https://dine-mate.vercel.app', 
     credentials:true,           
     optionSuccessStatus:200
 }

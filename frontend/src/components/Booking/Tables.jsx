@@ -18,7 +18,7 @@ const TableReservation = () => {
 
   const fetchTableDetails = async (tableId) => {
     try {
-      const response = await axios.get(`http://localhost:9000/api/table/${tableId}`);
+      const response = await axios.get(`${process.REACT_APP_SERVER}/api/table/${tableId}`);
       setTableDetails(response.data);
       setError(null);
     } catch (error) {

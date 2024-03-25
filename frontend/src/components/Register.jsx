@@ -66,7 +66,7 @@ const Register = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:9000/api/users/register",
+        `${process.REACT_APP_SERVER}/api/users/register`,
         inputValue,
         { withCredentials: true }
       );

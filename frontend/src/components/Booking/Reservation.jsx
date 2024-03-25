@@ -74,7 +74,7 @@ function Reservation() {
 
     if (validateForm()) {
       // Send a POST request to your backend API
-      fetch('http://localhost:9000/api/booking/reservations', {
+      fetch(`${process.REACT_APP_SERVER}/api/booking/reservations`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

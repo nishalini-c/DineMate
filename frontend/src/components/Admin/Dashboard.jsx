@@ -8,7 +8,7 @@ function Dashboard() {
   const [orderData, setOrderData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:9000/api/users/users')
+    axios.get(`${process.REACT_APP_SERVER}/api/users/users`)
       .then(response => {
         setUserData(response.data);
       })
@@ -16,7 +16,7 @@ function Dashboard() {
         console.error('Error fetching user data:', error);
       });
 
-    axios.get('http://localhost:9000/api/booking/reservations')
+    axios.get(`${process.REACT_APP_SERVER}/api/booking/reservations`)
       .then(response => {
         setReservationsData(response.data);
       })
@@ -24,7 +24,7 @@ function Dashboard() {
         console.error('Error fetching reservation data:', error);
       });
 
-    axios.get('http://localhost:9000/api/table/')
+    axios.get(`${process.REACT_APP_SERVER}/api/table/`)
       .then(response => {
         setOrderData(response.data);
       })
