@@ -1,0 +1,45 @@
+/* Dashboard.css */
+
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} 
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card3 {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-content3 {
+  text-align: center;
+}
+
+.card-content3 h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content3 p {
+  font-size: 18px;
+  margin-top: 5px;
+  color: black;
+}
+
+.fa-solid {
+  font-size: 35px;
+  color: #746c6c;
+}

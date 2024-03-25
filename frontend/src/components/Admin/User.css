@@ -1,0 +1,121 @@
+/* styles.css */
+/* User.css */
+
+.userlist {
+  margin-top: 10px;
+}
+
+.edit-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+/* User.css or any appropriate CSS file */
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-bottom: none;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-footer button {
+  margin-right: 10px;
+}
+
+
+.edit-form button {
+  margin-right: 10px;
+}
+
+.modal-body input {
+  margin-bottom: 10px;
+}
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  
+/* User.css */
+
+.reservationList {
+  margin-top: 20px;
+}
+
+.edit-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.edit-form button {
+  margin-right: 10px;
+}
+
+.modal-body input {
+  margin-bottom: 10px;
+}
+
+  
+  
+  .edit-form button:hover {
+    background-color: #ed7b10;
+  }
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #e9830f;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .pagination button:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+  }
+  
