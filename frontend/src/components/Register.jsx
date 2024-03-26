@@ -66,7 +66,7 @@ const Register = () => {
 
     try {
       const { data } = await axios.post(
-        `${process.REACT_APP_SERVER}/api/users/register`,
+        `${process.env.REACT_APP_SERVER}/api/users/register`,
         inputValue,
         { withCredentials: true }
       );

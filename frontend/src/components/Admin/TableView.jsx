@@ -14,7 +14,7 @@ const TableView = () => {
     const handleUpload = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${process.REACT_APP_SERVER}/api/table/new`, { tableNumber, numberOfSeats, tableImage }, {
+            const response = await axios.post(`${process.env.REACT_APP_SERVER}/api/table/new`, { tableNumber, numberOfSeats, tableImage }, {
                 headers: {
                     "Content-Type": 'application/json',
                 }

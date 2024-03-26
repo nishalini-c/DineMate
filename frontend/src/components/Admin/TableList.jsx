@@ -12,7 +12,7 @@ const View = () => {
   useEffect(() => {
     const fetchTableReservations = async () => {
       try {
-        const response = await axios.get(`${process.REACT_APP_SERVER}/api/table/`);
+        const response = await axios.get(`${process.env.REACT_APP_SERVER}/api/table/`);
         setTableReservations(response.data);
       } catch (error) {
         console.error('Error fetching table reservations:', error);
@@ -28,7 +28,7 @@ const View = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${process.REACT_APP_SERVER}/api/table/${id}`);
+      await axios.delete(`${process.env.REACT_APP_SERVER}/api/table/${id}`);
       setTableReservations((prevReservations) =>
         prevReservations.filter((reservation) => reservation._id !== id)
       );
@@ -41,7 +41,7 @@ const View = () => {
   const handleSubmit = async () => {
     try {
       await axios.put(
-        `${process.REACT_APP_SERVER}/api/table/${editReservation._id}`,
+        `${process.env.REACT_APP_SERVER}/api/table/${editReservation._id}`,
         editReservation
       );
       setShowModal(false);

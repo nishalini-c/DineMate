@@ -12,7 +12,7 @@ const BookingForm = () => {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await axios.get(`${process.REACT_APP_SERVER}/api/booking/reservations?page=${currentPage}&limit=${resPerPage}`, { withCredentials: true });
+        const response = await axios.get(`${process.env.REACT_APP_SERVER}/api/booking/reservations?page=${currentPage}&limit=${resPerPage}`, { withCredentials: true });
         setReservations(response.data.reservations);
       } catch (error) {
         console.error('Error fetching reservations:', error);

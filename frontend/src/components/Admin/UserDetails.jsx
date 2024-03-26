@@ -13,7 +13,7 @@ const UserDetails = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get(`${process.REACT_APP_SERVER}/api/users/users`, { withCredentials: true });
+        const response = await axios.get(`${process.env.REACT_APP_SERVER}/api/users/users`, { withCredentials: true });
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -42,8 +42,8 @@ const UserDetails = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.put(`${process.REACT_APP_SERVER}/api/users/${editUser._id}`, editUser);
-      const response = await axios.get(`${process.REACT_APP_SERVER}/api/users/users`, { withCredentials: true });
+      await axios.put(`${process.env.REACT_APP_SERVER}/api/users/${editUser._id}`, editUser);
+      const response = await axios.get(`${process.env.REACT_APP_SERVER}/api/users/users`, { withCredentials: true });
       setUsers(response.data);
       setEditUser(null);
       setShowModal(false);
@@ -55,7 +55,7 @@ const UserDetails = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${process.REACT_APP_SERVER}/api/users/${id}`);
+      await axios.delete(`${process.env.REACT_APP_SERVER}/api/users/${id}`);
       const updatedUsers = users.filter(user => user._id !== id);
       setUsers(updatedUsers);
       toast.success('User deleted successfully');
